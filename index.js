@@ -27,6 +27,9 @@ function resetGame() {
   gameDimulai = false;
   lingkaran.style.backgroundColor = 'brown';
   button.textContent = "Mulai lagi"
+  button.style.opacity = "1";
+  button.disabled = false
+  
 }
 
 button.addEventListener('click', function () {
@@ -36,6 +39,9 @@ button.addEventListener('click', function () {
   lingkaran.style.backgroundColor = 'brown';
 
   startCountdown(detik);
+  button.disabled = true
+  button.style.opacity = "0.5";
+
 });
 
 document.addEventListener('keydown', function (event) {
